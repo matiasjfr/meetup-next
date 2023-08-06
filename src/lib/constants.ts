@@ -1,0 +1,3 @@
+export const MAX_STRING_LENGTH_100 = 100;
+export const MAX_STRING_LENGTH_255 = 255;
+export const MAX_STRING_LENGTH_1000 = 1000;

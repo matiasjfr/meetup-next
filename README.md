@@ -1,34 +1,66 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+##### _I am using pnpm._
 
-First, run the development server:
+
+First, install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+```
+
+Second, run the development server:
+
+```bash
 pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Styles
+- [Tailwind](https://tailwindcss.com/)
+- [Shadcn](https://ui.shadcn.com/): Re-usable components built using Radix UI and Tailwind CSS.
+- [Prettier plugin sort imports](@ianvs/prettier-plugin-sort-imports): An opinionated but flexible prettier plugin to sort import statements.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Others
+- ORM: [Prisma](https://www.prisma.io/)
+- Schema validation: [Zod](https://zod.dev/)
 
-## Learn More
+## Faq
 
-To learn more about Next.js, take a look at the following resources:
+- ### First installation?
+    * [Install nvm](https://github.com/nvm-sh/nvm#installing-and-updating) or [install node 18.17.0 LTS](https://nodejs.org/es/download/)
+    * [Install pnpm](https://pnpm.io/installation) 
+    * [Install vscode prisma extension](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma).
+    * Copy the file .env.example to .env and replace the values.
+    * _"pnpm db:generate"_ to generate the types in node_modules
+    * _"pnpm db:migrate"_ to create the tables in the database
+    * _"npm install -g ts-node"_ to install ts-node globally and to be able to seed the database
+    * Seed DB: _"pnpm prisma db seed"_ or _"pnpm db:reset"_
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- ### Useful commands
+    - pnpm db:pull
+        - Pull the database from the server
+    - pnpm db:push
+        - Push the database to the server
+    - pnpm db:generate
+        - Generate the types in node_modules
+    - pnpm db:migrate
+        - Create the tables in the database
+    - pnpm prisma db seed
+        - Seed the database
+    - pnpm db:reset --skip-seed
+        - Reset the database (also resets the identities) without seed
+    - pnpm db:reset
+        - Reset the database (also resets the identities) with seed
+    - pnpm lint
+        - Lint the code
+    - pnpm lint:fix
+        - Lint the code and fix the errors
+    - pnpm typecheck
+        - Check the types
+    - pnpm format:write
+        - Format the code
+    - pnpm format:check
+        - Check the format of the code
