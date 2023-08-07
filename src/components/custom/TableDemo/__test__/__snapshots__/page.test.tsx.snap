@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableDemo TableDemo correctly 1`] = `
+<div>
+  <div
+    class="w-full overflow-auto"
+  >
+    <table
+      class="w-full caption-bottom text-sm"
+    >
+      <caption
+        class="mt-4 text-sm text-muted-foreground"
+      >
+        A list of your products
+      </caption>
+      <thead
+        class="[&_tr]:border-b"
+      >
+        <tr
+          class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        >
+          <th
+            class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-[100px]"
+          >
+            Image
+          </th>
+          <th
+            class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-[20px]"
+          >
+            ID
+          </th>
+          <th
+            class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+          >
+            Name
+          </th>
+          <th
+            class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+          >
+            Status
+          </th>
+          <th
+            class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+          >
+            Description
+          </th>
+          <th
+            class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+          >
+            Category
+          </th>
+          <th
+            class="h-12 px-4 align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 text-center"
+          >
+            Buy Price
+          </th>
+          <th
+            class="h-12 px-4 align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 text-center"
+          >
+            Sell Price
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="[&_tr:last-child]:border-0"
+      >
+        <tr
+          class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        >
+          <td
+            class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+          >
+            <img
+              alt="Product 1"
+              class="rounded-full"
+              height="50"
+              src="https://loremflickr.com/100/100"
+              width="50"
+            />
+          </td>
+          <td
+            class="p-4 align-middle [&:has([role=checkbox])]:pr-0 font-medium"
+          >
+            1
+          </td>
+          <td
+            class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+          >
+            Product 1
+          </td>
+          <td
+            class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+          >
+            ACTIVE
+          </td>
+          <td
+            class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+          />
+          <td
+            class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+          >
+            Computers
+          </td>
+          <td
+            class="p-4 align-middle [&:has([role=checkbox])]:pr-0 text-center"
+          >
+            0
+          </td>
+          <td
+            class="p-4 align-middle [&:has([role=checkbox])]:pr-0 text-center"
+          >
+            0
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

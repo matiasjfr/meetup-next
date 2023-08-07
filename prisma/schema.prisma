@@ -15,7 +15,6 @@ model Product {
   sellPrice   Decimal? @map("sell_price") @db.Decimal(20, 4)
   status      EStatus  @default(ACTIVE)
   image       String?  @db.VarChar(1000)
-  brandName   String?  @map("brand_name") @db.VarChar(255)
 
   idCategory Int             @map("id_category")
   category   ProductCategory @relation(fields: [idCategory], references: [id])
