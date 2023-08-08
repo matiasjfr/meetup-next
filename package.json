@@ -21,7 +21,7 @@
     "db:pull": "pnpx prisma db pull",
     "db:push": "pnpx prisma db push",
     "test": "jest --watch",
-    "ci": "jest --ci --coverage",
+    "test:ci": "jest --ci --coverage",
     "prepare": "husky install"
   },
   "prisma": {
