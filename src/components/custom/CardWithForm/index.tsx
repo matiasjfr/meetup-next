@@ -35,7 +35,7 @@ export function CardWithForm({ productCategories }: Props) {
   const onSubmit = async (data: ProductSchemaCreateInput) => {
     setErrorPost('');
     console.log(data);
-    const res = await fetch(`http://localhost:3000/api/v1/products`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/v1/products`, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
