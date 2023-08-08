@@ -21,7 +21,6 @@ export const isEmpty = (value: string | null | undefined) => {
 };
 
 export const stringToNumber = (value: string | null | undefined) => {
-  // if (isEmpty(value)) return '111';
   if (isNaN(Number(value))) return value;
 
   return Number(value);
