@@ -4,9 +4,8 @@
 name: Node.js CI
 
 on:
-  push:
+  pull_request:
     branches: ['main']
-
 jobs:
   build:
     runs-on: self-hosted
@@ -31,10 +30,10 @@ jobs:
       #     echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
       #     echo "NEXT_PUBLIC_APP_URL=${{ secrets.NEXT_PUBLIC_APP_URL }}" >> .env
       # - name: Use Node.js ${{ matrix.node-version }}
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: ${{ matrix.node-version }}
-      #     cache: 'pnpm'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
       # - run: pnpm i
       # - run: pnpm test:ci
 
