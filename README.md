@@ -39,48 +39,48 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Faq
 
 - ### Useful commands
-    - `pnpm db:pull`
+    - `yarn db:pull`
         - Pull the database from the server
-    - `pnpm db:push`
+    - `yarn db:push`
         - Push the database to the server
-    - `pnpm db:generate`
+    - `yarn db:generate`
         - Generate the types in node_modules
-    - `pnpm db:migrate`
+    - `yarn db:migrate`
         - Create the tables in the database
-    - `pnpm prisma db seed`
+    - `yarn prisma db seed`
         - Seed the database
-    - `pnpm db:reset --skip-seed`
+    - `yarn db:reset --skip-seed`
         - Reset the database (also resets the identities) without seed
-    - `pnpm db:reset`
+    - `yarn db:reset`
         - Reset the database (also resets the identities) with seed
-    - `pnpm lint`
+    - `yarn lint`
         - Lint the code
-    - `pnpm lint:fix`
+    - `yarn lint:fix`
         - Lint the code and fix the errors
-    - `pnpm typecheck`
+    - `yarn typecheck`
         - Check the types
-    - `pnpm format:write`
+    - `yarn format:write`
         - Format the code
-    - `pnpm format:check`
+    - `yarn format:check`
         - Check the format of the code
-    - `pnpm test`
+    - `yarn test`
         - Run the tests
 - ### First installation?
     * [Install nvm](https://github.com/nvm-sh/nvm#installing-and-updating) or [install node 18.17.0 LTS](https://nodejs.org/es/download/)
-    * [Install pnpm](https://pnpm.io/installation) 
+    * [Install yarn](https://classic.yarnpkg.com/lang/en/docs/install/) 
     * [Install vscode prisma extension](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma).
     * [Install Docker](https://www.docker.com/products/docker-desktop/).
     * Copy the file .env.example to .env and replace the values.
-    * `pnpm db:generate` to generate the types in node_modules
-    * `pnpm db:migrate` to create the tables in the database
+    * `yarn db:generate` to generate the types in node_modules
+    * `yarn db:migrate` to create the tables in the database
     * `npm install -g ts-node` to install ts-node globally and to be able to seed the database
-    * Seed DB: `pnpm prisma db seed` or `pnpm db:reset`
+    * Seed DB: `yarn prisma db seed` or `yarn db:reset`
 
 
 
 - ### How do I make a change to the database with Prisma?
     - I make the change to the schema.prisma file
-    - Then run the command `pnpm db:migrate`, optional: `[--name optionalName] [--skip-seed]`
+    - Then run the command `yarn db:migrate`, optional: `[--name optionalName] [--skip-seed]`
 
 ## Contributions
 
