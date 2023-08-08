@@ -10,8 +10,8 @@ export async function GET(request: Request) {
 
   const [limit, page] = getPaginationAPI(searchParams.get('limit'), searchParams.get('page'));
 
-  const [products, meta] = await prisma.product
-    .paginate({
+  // @ts-ignore
+  const [products, meta] = await prisma.product.paginate({
       include: { category: !!searchParams.get('category') },
       orderBy: { id: 'desc' },
     })

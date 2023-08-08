@@ -8,13 +8,12 @@ export async function GET(request: Request) {
 
   const [limit, page] = getPaginationAPI(searchParams.get('limit'), searchParams.get('page'));
 
-  const [productCategories, meta] = await prisma.productCategory
-    .paginate()
-    .withPages({
-      limit,
-      page,
-      includePageCount: true,
-    });
+  // @ts-ignore
+  const [productCategories, meta] = await prisma.productCategory.paginate().withPages({
+    limit,
+    page,
+    includePageCount: true,
+  });
 
   return NextResponse.json(
     { results: productCategories, pagination: { ...meta, limit } },
