@@ -111,13 +111,6 @@
   a.active {
     color: #5355da;
   }
-  button {
-    font-size: 1rem;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-    background: none;
-  }
   .container {
     max-width: 62rem;
     margin: 1.5rem auto;
