@@ -17,7 +17,6 @@ export default withPageAuthRequired(
         <h3>User</h3>
         <pre>{JSON.stringify(session?.user, null, 2)}</pre>
         <h2>Server Component:</h2>
-        {/*@ts-expect-error Async Server Component*/}
         <ServerComponent />
         <h2>Client Component:</h2>
         <ClientComponent />
