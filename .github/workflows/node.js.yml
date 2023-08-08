@@ -23,13 +23,13 @@ jobs:
           version: 8
       - name: 'Create env file'
         run: |
-          echo "AUTH0_BASE_URL:${{ secrets.AUTH0_BASE_URL }}" > .env
-          echo "AUTH0_CLIENT_ID:${{ secrets.AUTH0_CLIENT_ID }}" >> .env
-          echo "AUTH0_CLIENT_SECRET:${{ secrets.AUTH0_CLIENT_SECRET }}" >> .env
-          echo "AUTH0_ISSUER_BASE_URL:${{ secrets.AUTH0_ISSUER_BASE_URL }}" >> .env
-          echo "AUTH0_SECRET:${{ secrets.AUTH0_SECRET }}" >> .env
-          echo "DATABASE_URL:${{ secrets.DATABASE_URL }}" >> .env
-          echo "NEXT_PUBLIC_APP_URL:${{ secrets.NEXT_PUBLIC_APP_URL }}" >> .env
+          echo "AUTH0_BASE_URL=${{ secrets.AUTH0_BASE_URL }}" > .env
+          echo "AUTH0_CLIENT_ID=${{ secrets.AUTH0_CLIENT_ID }}" >> .env
+          echo "AUTH0_CLIENT_SECRET=${{ secrets.AUTH0_CLIENT_SECRET }}" >> .env
+          echo "AUTH0_ISSUER_BASE_URL=${{ secrets.AUTH0_ISSUER_BASE_URL }}" >> .env
+          echo "AUTH0_SECRET=${{ secrets.AUTH0_SECRET }}" >> .env
+          echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
+          echo "NEXT_PUBLIC_APP_URL=${{ secrets.NEXT_PUBLIC_APP_URL }}" >> .env
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
