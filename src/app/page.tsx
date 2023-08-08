@@ -1,43 +1,22 @@
-import { Prisma, Product, ProductCategory } from '@prisma/client';
+'use client';
+import { useUser } from '@auth0/nextjs-auth0/client';
 
-import { GetAllResponse } from '@/types/global';
-import { CardWithForm } from '@/components/custom/CardWithForm';
-import { TableDemo } from '@/components/custom/TableDemo';
+export default function Index() {
+  const { user, error, isLoading } = useUser();
 
-async function getProducts() {
-  const res = await fetch(`http://localhost:3000/api/v1/products?category=true`, { cache: 'no-cache' });
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-  const productsResponse: GetAllResponse<Prisma.ProductGetPayload<{ include: { category: true } }>> =
-    await res.json();
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
 
-  return productsResponse;
-}
-
-async function getProductCategories() {
-  const res = await fetch(`http://localhost:3000/api/v1/productCategories`, { cache: 'no-cache' });
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-  const productsResponse: GetAllResponse<ProductCategory> = await res.json();
-
-  return productsResponse;
-}
-
-export default async function Home() {
-  const productsResponse = await getProducts();
-  const productCategoriesResponse = await getProductCategories();
-  return (
-    <main className="flex min-h-screen flex-col items-center p-5">
+  if (user) {
+    return (
       <div>
-        <CardWithForm
-          productCategories={productCategoriesResponse.results}
-        />
+        Welcome {user.name}! 
+        <div>
+        <a href="/api/auth/logout">Logout</a>
+        </div>
       </div>
-      <div>
-        <TableDemo products={productsResponse.results} />
-      </div>
-    </main>
-  );
+    );
+  }
+
+  return null;
 }

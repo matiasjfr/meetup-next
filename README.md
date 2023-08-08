@@ -7,7 +7,12 @@ First, install dependencies:
 pnpm install
 ```
 
+
 Second, run the development server:
+
+```bash
+docker-compose up -d 
+```
 
 ```bash
 pnpm dev
@@ -65,6 +70,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
     * [Install nvm](https://github.com/nvm-sh/nvm#installing-and-updating) or [install node 18.17.0 LTS](https://nodejs.org/es/download/)
     * [Install pnpm](https://pnpm.io/installation) 
     * [Install vscode prisma extension](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma).
+    * [Install Docker](https://www.docker.com/products/docker-desktop/).
     * Copy the file .env.example to .env and replace the values.
     * `pnpm db:generate` to generate the types in node_modules
     * `pnpm db:migrate` to create the tables in the database
