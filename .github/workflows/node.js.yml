@@ -29,4 +29,4 @@ jobs:
         cache: 'pnpm'
     - run: pnpm i
     - run: pnpm test:ci
-    - run: pnpm build --if-present
+    - run: pnpm build
