@@ -33,12 +33,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: 'yarn'
       # - run: pnpm i
       # - run: pnpm test:ci
 
       # - run: pnpm build
       # - run: pm2 reload 0
-      - run: npm install
-      - run: npm run test:ci
-      - run: npm ci
+      - run: yarn install
+      - run: yarn test:ci
