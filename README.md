@@ -1,5 +1,4 @@
 ## Getting Started
-##### _I am using pnpm._
 
 First, install dependencies:
 
