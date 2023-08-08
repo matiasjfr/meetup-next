@@ -8,7 +8,7 @@ on:
     branches: ['main']
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -41,3 +41,7 @@ jobs:
       # - run: pm2 reload 0
       - run: yarn
       - run: yarn test:ci
+
+
+      postgresql://doadmin:AVNS_gHOfyaNkmGsuJqvMuux@db-postgresql-nyc1-53984-do-user-14491099-0.b.db.ondigitalocean.com:25060/defaultdb?sslmode=require
+      postgresql://doadmin:AVNS_gHOfyaNkmGsuJqvMuux@private-db-postgresql-nyc1-53984-do-user-14491099-0.b.db.ondigitalocean.com:25060/defaultdb?sslmode=require
