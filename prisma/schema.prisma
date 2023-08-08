@@ -13,7 +13,7 @@ model Product {
   description String?  @db.VarChar(1000)
   buyPrice    Decimal? @map("buy_price") @db.Decimal(20, 4)
   sellPrice   Decimal? @map("sell_price") @db.Decimal(20, 4)
-  status      EStatus  @default(ACTIVE)
+  status      EStatus?  @default(ACTIVE)
   image       String?  @db.VarChar(1000)
 
   idCategory Int             @map("id_category")
@@ -27,7 +27,7 @@ model ProductCategory {
   id          Int     @id @unique @default(autoincrement())
   name        String  @db.VarChar(255)
   description String? @db.VarChar(1000)
-  status      EStatus @default(ACTIVE)
+  status      EStatus? @default(ACTIVE)
 
   products Product[]
 
