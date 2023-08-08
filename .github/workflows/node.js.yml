@@ -39,5 +39,5 @@ jobs:
 
       # - run: pnpm build
       # - run: pm2 reload 0
-      - run: yarn install
+      - run: yarn
       - run: yarn test:ci
