@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/table';
 
 interface Props {
-  products: Prisma.ProductGetPayload<{ include: { category: true } }>[];
+  products: Prisma.ProductGetPayload<{ include: { category: true } }>[] | [];
 }
 
 export function TableDemo({ products }: Props) {
