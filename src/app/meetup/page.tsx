@@ -6,7 +6,7 @@ import { TableDemo } from '@/components/custom/TableDemo';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
 async function getProducts() {
-  const res = await fetch(`http://localhost:3000/api/v1/products?category=true`, { cache: 'no-cache' });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/v1/products?category=true`, { cache: 'no-cache' });
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
@@ -17,7 +17,7 @@ async function getProducts() {
 }
 
 async function getProductCategories() {
-  const res = await fetch(`http://localhost:3000/api/v1/productCategories`, { cache: 'no-cache' });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/v1/productCategories`, { cache: 'no-cache' });
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }

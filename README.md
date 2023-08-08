@@ -3,7 +3,7 @@
 First, install dependencies:
 
 ```bash
-pnpm install
+yarn
 ```
 
 
@@ -14,7 +14,7 @@ docker-compose up -d
 ```
 
 ```bash
-pnpm dev
+yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
