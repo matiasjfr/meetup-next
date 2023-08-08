@@ -1,4 +1,4 @@
-import { EStatus, PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 
 import { isProduction } from '../src/lib/utils';
 import { fakeProductArray } from './fakers/fakeProduct';
@@ -6,7 +6,7 @@ import { fakeProductCategory } from './fakers/fakeProductCategory';
 
 const prisma = new PrismaClient();
 
-export const LIMIT_SEED = 10;
+export const LIMIT_SEED = 3;
 
 async function main() {
   if (isProduction()) {
@@ -26,7 +26,7 @@ async function main() {
 
   console.log(`🌱 Seeding Products`);
   await prisma.product.createMany({
-    data: fakeProductArray(LIMIT_SEED * 5),
+    data: fakeProductArray(LIMIT_SEED * 2),
   });
 }
 
