@@ -61,7 +61,7 @@ export function CardWithForm({ productCategories }: Props) {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <CardHeader>
-            <CardTitle>Create product</CardTitle>
+            <CardTitle>MEETUP REACT BUENOS AIRES</CardTitle>
             <CardDescription>Try me!</CardDescription>
           </CardHeader>
           <CardContent>
